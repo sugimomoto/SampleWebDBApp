@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>golang_template</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>RowId</th>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>PublishDate</th>
+                <th>ImageUrl</th>
+            </tr>
+        </thead>
+ 
+        <tbody>
+            {{ range .Value }}
+            <tr>
+                <td>{{ .RowId }}</td>
+                <td>{{ .Title }}</td>
+                <td>{{ .ISBN }}</td>
+                <td>{{ .Price }}</td>
+                <td>{{ .PublishDate }}</td>
+                <td>{{ .ImageUrl }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    
+
+ 
+</body>
+</html>
